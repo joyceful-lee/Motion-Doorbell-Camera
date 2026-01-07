@@ -43,7 +43,7 @@ os.makedirs(config.SAVE_PATH, exist_ok=True)
 # ----------------------------
 picam = Picamera2()
 camera_config = picam.create_video_configuration(
-    main={"size": (640, 480), "format": "BGR888"}
+    main={"size": (640, 480), "format": "RGB888"}
 )
 picam.configure(camera_config)
 picam.start()
