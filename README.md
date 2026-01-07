@@ -31,6 +31,11 @@ pip install imutils
 ```
 
 Download this repository and make sure your files are organized the same way this repository is.
+
+Rename project_folder to whatever you desire and place it wherever you desire.
+
+Rename project_name_desktop to whatever you desire and place it inside /home/your_username.
+
 Connect your pi to Google Drive:
 
 ```
