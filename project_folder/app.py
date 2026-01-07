@@ -47,8 +47,7 @@ def index():
     )
 
 if __name__ == "__main__":
-    motion.init_camera()
+    threading.Thread(target=motion.camera_loop, daemon=True).start()
     threading.Thread(target=motion.detect_motion, daemon=True).start()
-    threading.Thread(target=motion.camera_watchdog, daemon=True).start()
     print("Starting Flask Server")
     app.run(host="0.0.0.0", port=5000,debug=False, use_reloader=False)
