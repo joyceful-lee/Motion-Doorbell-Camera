@@ -1,0 +1,15 @@
+{
+  "name": "project_name_desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^39.2.7"
+  }
+}
