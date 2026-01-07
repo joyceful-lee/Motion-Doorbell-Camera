@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Motion Control</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 20px;
+            width: 50%;
+            height: 100%;
+        }
+    </style>
+</head>
+    <body>
+        <main class="main">
+            <section class="left">
+                <h1>Motion Detection</h1>
+                <p>Status: <strong>{{ "ON" if enabled else "OFF" }}</strong></p>
+                <a href="/toggle">
+                    <button>Toggle</button>
+                </a>
+                
+                <h2>Live Stream</h2>
+                <form method="POST" action="/toggle_stream">
+                    <button type="submit">
+                        {{ "Disable" if stream_enabled else "Enable" }} Live Stream
+                    </button>
+                </form>
+            </section>
+            <section>
+                {% if stream_enabled %}
+                    <img src="/video_feed" width="320" height="240">
+                {% else %}
+                    <p>Live stream is OFF</p>
+                {% endif %}
+            </section> 
+        </main>
+    </body>
+</html>
